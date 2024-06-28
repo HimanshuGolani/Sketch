@@ -1,19 +1,29 @@
 import express from "express";
 import cookieParser from "cookie-parser";
+import "dotenv/config";
 import DbConnect from "./DbConnect/DbConnect.js";
+import vRouter from "./routes/venderRouter.js";
+import uRouter from "./routes/userRouter.js";
+import pRouter from "./routes/productRouter.js";
+
+// app instance
 const app = express();
 
+// middlewares
 app.use(express.json());
 app.use(cookieParser());
 
-app.get("/", (req, res) => {
-  res.send("Hellow");
-});
+// routers
+app.use("/venders", vRouter);
+app.use("users", uRouter);
+app.use("products", pRouter);
 
+// db connect
 DbConnect();
 
-app.listen(3000, () => {
+// starting the app at the port
+app.listen(process.env.PORT, () => {
   console.log("====================================");
-  console.log("server is running");
+  console.log("server is running", process.env.PORT);
   console.log("====================================");
 });

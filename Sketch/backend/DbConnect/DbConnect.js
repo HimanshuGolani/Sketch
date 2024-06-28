@@ -1,8 +1,9 @@
 import mongoose from "mongoose";
+import "dotenv/config";
 
 const DbConnect = () => {
   mongoose
-    .connect("mongodb://127.0.0.1:27017")
+    .connect(process.env.MONGO_URL)
     .then(() => {
       console.log("DB connected succesfully");
     })

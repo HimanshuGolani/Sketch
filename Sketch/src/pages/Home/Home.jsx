@@ -8,7 +8,7 @@ function Home() {
   return (
     <>
       {auth ? (
-        <>Home</>
+        <>Home Page</>
       ) : (
         <>
           <Login />

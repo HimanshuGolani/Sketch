@@ -27,8 +27,8 @@ const Login = () => {
         <div className="w-full md:w-1/2 flex items-center justify-center min-h-screen p-5 md:p-20">
           <div className="w-full md:w-3/4 lg:w-1/2">
             <h3 className="text-3xl md:text-4xl">
-              Welcome to{" "}
-              <span className="text-blue-400 font-semibold">Sketch</span>
+              Welcome to
+              <span className="text-blue-400 font-semibold"> Sketch</span>
             </h3>
             <h4 className="text-xl md:text-2xl mb-5">Create your account</h4>
             <form autoComplete="off" onSubmit={handleRegisterSubmit}>

@@ -5,6 +5,7 @@ const AppContext = createContext();
 const AppFieldProvider = ({ children }) => {
   const [auth, setAuth] = useState(false);
   const [currentUserId, setCurrentUserId] = useState("");
+  const [role, setRole] = useState("");
 
   return (
     <AppContext.Provider
@@ -13,6 +14,8 @@ const AppFieldProvider = ({ children }) => {
         setAuth,
         currentUserId,
         setCurrentUserId,
+        role,
+        setRole,
       }}
     >
       {children}

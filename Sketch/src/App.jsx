@@ -3,12 +3,12 @@ import { Route, Routes } from "react-router-dom";
 import Login from "./pages/Login-Reg/Login";
 import { useAppState } from "./Context/useAppContext";
 import Home from "./pages/Home/Home";
+import NavBar from "./Components/Navbar";
 
 const App = () => {
-  const { auth } = useAppState();
-
   return (
     <>
+      <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />

@@ -15,4 +15,6 @@ const venderSchema = mongoose.Schema({
   picture: String,
 });
 
+console.log(mongoose.model("vender", venderSchema));
+
 export default mongoose.model("vender", venderSchema);

@@ -14,9 +14,9 @@ app.use(express.json());
 app.use(cookieParser());
 
 // routers
-app.use("/venders", vRouter);
-app.use("users", uRouter);
-app.use("products", pRouter);
+app.use("/api/v1/venders", vRouter);
+app.use("/api/v1//users", uRouter);
+app.use("/api/v1//products", pRouter);
 
 // db connect
 DbConnect();

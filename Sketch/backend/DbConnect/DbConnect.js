@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import "dotenv/config";
-
+import debug from "debug";
 const DbConnect = () => {
   mongoose
     .connect(process.env.MONGO_URL)
